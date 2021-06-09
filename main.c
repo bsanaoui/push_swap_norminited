@@ -6,7 +6,7 @@
 /*   By: bsanaoui <bsanaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 17:03:08 by bsanaoui          #+#    #+#             */
-/*   Updated: 2021/06/04 17:05:28 by bsanaoui         ###   ########.fr       */
+/*   Updated: 2021/06/09 11:56:59 by bsanaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,7 @@ int	main(int argc, char *argv[])
 		free(a.data);
 	if (b.data)
 		free(b.data);
+		//system("leaks push_swap");
 	return (0);
+	
 }

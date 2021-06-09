@@ -6,7 +6,7 @@
 #    By: bsanaoui <bsanaoui@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/04 18:37:09 by bsanaoui          #+#    #+#              #
-#    Updated: 2021/06/04 18:37:11 by bsanaoui         ###   ########.fr        #
+#    Updated: 2021/06/04 18:54:36 by bsanaoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ $(NAME):
 	@$(CC) $(SRC) checker_operations.c checker_operations2.c checker.c get_next_line.c -I. $(FLAGS) -o $(BONUS)
 
 fclean: clean
-	@rm -f $(NAME) $(BONUS)ßß
+	@rm -f $(NAME) $(BONUS)
 
 clean:
 	@rm -f *.o

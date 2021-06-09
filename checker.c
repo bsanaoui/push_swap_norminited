@@ -6,7 +6,7 @@
 /*   By: bsanaoui <bsanaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 16:54:04 by bsanaoui          #+#    #+#             */
-/*   Updated: 2021/06/04 16:54:11 by bsanaoui         ###   ########.fr       */
+/*   Updated: 2021/06/08 17:28:56 by bsanaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,12 +77,14 @@ int	main(int argc, char *argv[])
 	init_stack(&a, argc - 1, 1);
 	init_stack(&b, argc - 1, 0);
 	fill_list(&a, argc, argv);
-	line = (char *)malloc(sizeof(char) * 1);
+	line = NULL;
 	len = 0;
 	while (get_next_line(&line))
 	{
 		if (!do_operations(&a, &b, line))
 			ft_perror("");
+		if (line)
+			free(line);
 	}
 	if (is_sorted(a) && size(b) == 0)
 		put_string("OK\n");
